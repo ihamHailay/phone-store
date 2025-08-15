@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --radius: 0.75rem;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Apple-inspired design system */
+.apple-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.apple-blue {
+  background: linear-gradient(135deg, #007aff 0%, #0051d5 100%);
+}
+
+.apple-silver {
+  background: linear-gradient(135deg, #e5e5ea 0%, #c7c7cc 100%);
+}
+
+.apple-space-gray {
+  background: linear-gradient(135deg, #8e8e93 0%, #636366 100%);
+}
+
+.apple-gold {
+  background: linear-gradient(135deg, #ffd60a 0%, #ff9500 100%);
+}
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-morphism {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.apple-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.dark .apple-card {
+  background: rgba(28, 28, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.apple-button {
+  background: linear-gradient(135deg, #007aff 0%, #0051d5 100%);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
+}
+
+.apple-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 122, 255, 0.4);
+}
+
+.apple-text-primary {
+  color: #1d1d1f;
+}
+
+.dark .apple-text-primary {
+  color: #f5f5f7;
+}
+
+.apple-text-secondary {
+  color: #86868b;
+}
+
+.apple-bg-primary {
+  background-color: #f5f5f7;
+}
+
+.dark .apple-bg-primary {
+  background-color: #1d1d1f;
+}
+
+.apple-bg-secondary {
+  background-color: #fbfbfd;
+}
+
+.dark .apple-bg-secondary {
+  background-color: #2c2c2e;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile responsive utilities */
+.mobile-container {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .mobile-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.mobile-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .mobile-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* iPhone product colors */
+.color-midnight {
+  background: linear-gradient(135deg, #1d1d1f 0%, #000000 100%);
+}
+
+.color-starlight {
+  background: linear-gradient(135deg, #faf0e6 0%, #f5f5dc 100%);
+}
+
+.color-product-red {
+  background: linear-gradient(135deg, #ff3b30 0%, #d70015 100%);
+}
+
+.color-blue {
+  background: linear-gradient(135deg, #007aff 0%, #0051d5 100%);
+}
+
+.color-purple {
+  background: linear-gradient(135deg, #af52de 0%, #8e44ad 100%);
+}
+
+.color-pink {
+  background: linear-gradient(135deg, #ff2d92 0%, #e91e63 100%);
+}
+
+.color-yellow {
+  background: linear-gradient(135deg, #ffd60a 0%, #ff9500 100%);
+}
+
+.color-green {
+  background: linear-gradient(135deg, #30d158 0%, #28a745 100%);
+}
+
+.color-space-gray {
+  background: linear-gradient(135deg, #8e8e93 0%, #636366 100%);
+}
+
+.color-silver {
+  background: linear-gradient(135deg, #e5e5ea 0%, #c7c7cc 100%);
+}
+
+.color-gold {
+  background: linear-gradient(135deg, #ffd60a 0%, #ff9500 100%);
+}
+
+.color-deep-purple {
+  background: linear-gradient(135deg, #5856d6 0%, #4834d4 100%);
+}
+
+.color-alpine-green {
+  background: linear-gradient(135deg, #004643 0%, #0f3027 100%);
+}
+
+.color-sierra-blue {
+  background: linear-gradient(135deg, #a7c5eb 0%, #7fb3d3 100%);
+}
+
+.color-graphite {
+  background: linear-gradient(135deg, #52514f 0%, #3a3a3c 100%);
+}
+
+/* Status indicators */
+.status-in-stock {
+  background: linear-gradient(135deg, #30d158 0%, #28a745 100%);
+}
+
+.status-low-stock {
+  background: linear-gradient(135deg, #ff9500 0%, #ff6b00 100%);
+}
+
+.status-out-of-stock {
+  background: linear-gradient(135deg, #ff3b30 0%, #d70015 100%);
+}
