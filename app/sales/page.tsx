@@ -249,7 +249,7 @@ export default function SalesPage() {
                 </TableHeader>
                 <TableBody>
                   {sales.map((sale) => (
-                    <TableRow key={sale.id} className="hover:bg-amber-50">
+                    <TableRow key={sale.id} className="hover:bg-gray-50 dark:hover:bg-gray-800">
                       <TableCell>{sale.date}</TableCell>
                       <TableCell className="font-medium">{sale.customer}</TableCell>
                       <TableCell>{sale.product}</TableCell>

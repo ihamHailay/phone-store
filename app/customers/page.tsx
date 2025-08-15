@@ -155,7 +155,7 @@ export default function CustomersPage() {
                   {customers.map((customer) => {
                     const loyaltyTier = getLoyaltyTier(customer.loyaltyPoints)
                     return (
-                      <TableRow key={customer.id} className="hover:bg-amber-50">
+                      <TableRow key={customer.id} className="hover:bg-gray-50 dark:hover:bg-gray-800">
                         <TableCell className="font-medium">{customer.name}</TableCell>
                         <TableCell>{customer.phone}</TableCell>
                         <TableCell className="text-sm text-gray-600">{customer.email}</TableCell>
