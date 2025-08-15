@@ -75,7 +75,7 @@ export default function CustomersPage() {
           </div>
           <Dialog open={isAddModalOpen} onOpenChange={setIsAddModalOpen}>
             <DialogTrigger asChild>
-              <Button className="gold-gradient hover:opacity-90 text-white shadow-lg">
+              <Button className="apple-button">
                 <Plus className="h-4 w-4 mr-2" />
                 Add Customer
               </Button>

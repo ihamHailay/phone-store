@@ -92,7 +92,7 @@ export default function SalesPage() {
           </div>
           <Dialog open={isNewSaleModalOpen} onOpenChange={setIsNewSaleModalOpen}>
             <DialogTrigger asChild>
-              <Button className="gold-gradient hover:opacity-90 text-white shadow-lg">
+              <Button className="apple-button">
                 <Plus className="h-4 w-4 mr-2" />
                 New Sale
               </Button>
